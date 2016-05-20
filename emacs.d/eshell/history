@@ -1,0 +1,14 @@
+ls
+echo $SHELL
+kek
+alias
+aliases
+echo $ENV
+printenv
+python
+/bin/zsh
+zsh
+exec zsh
+find zsh
+which zsh
+exit

@@ -1,0 +1,56 @@
+
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# added by (me) Anaconda 2.1.0 installer
+#export PATH="//anaconda/bin:$PATH"
+
+# Base16 Shell
+#BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
+#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+#custom alias
+
+alias ssh-cdf="ssh c4haarri@cdf.utoronto.ca"
+alias genpass="java -Dapple.awt.UIElement=true -jar ~/genpass/target/uberjar/genpass-0.1.0-SNAPSHOT-standalone.jar gen"
+alias getpass="java -Dapple.awt.UIElement=true -jar ~/genpass/target/uberjar/genpass-0.1.0-SNAPSHOT-standalone.jar get"
+alias rempass="java -Dapple.awt.UIElement=true -jar ~/genpass/target/uberjar/genpass-0.1.0-SNAPSHOT-standalone.jar rem"
+alias listpass="java -Dapple.awt.UIElement=true -jar ~/genpass/target/uberjar/genpass-0.1.0-SNAPSHOT-standalone.jar list"
+
+
+alias matlab="/Applications/MATLAB.app/bin/matlab -nodesktop"
+
+export PATH="/usr/local/bin:$PATH"
+#source ~/ros_catkin_ws/install_isolated/setup.zsh
+#source ~/slam_catkin_ws/install/setup.zsh
+#source ~/slam_catkin_ws/devel/setup.zsh
+source ~/indigo_catkin_ws/install_isolated/setup.zsh
+source ~/slam_indigo_catkin_ws/install/setup.zsh
+#unset DYLD_LIBRARY_PATH
+
+#alias vim="/usr/local/bin/vim"
+alias catkin_make_fast="catkin_make -DCMAKE_BUILD_TYPE=Release"
+
+
+#use emacs keys for navigation
+bindkey -e
+
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+#export JAVA_OPTIONS="-XX:-UseGCOverheadLimit"
+
+#Set up terrier classpaths
+export JAR="/Users/richhaar/Documents/M052/Terrier/terrier-core-4.1/target/terrier-core-4.1-jar-with-dependencies.jar"
+export CLASSPATH=$JAVA_HOME/lib/tools.jar
+export CLASSPATH=$CLASSPATH:$JAR:/Users/richhaar/Documents/M052/Terrier/terrier-core-4.1/etc/logback.xml
+export CLASSPATH=$CLASSPATH:~/Documents/M052/Terrier/src
