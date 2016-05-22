@@ -18,3 +18,6 @@
 ;; Tex spelling checks
 (add-hook 'tex-mode-hook
           #'(lambda () (setq ispell-parser 'tex)))
+
+;; Org specific settings
+(setq org-log-done 'time)
